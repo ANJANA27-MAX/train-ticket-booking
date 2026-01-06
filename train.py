@@ -32,11 +32,11 @@ while True:
                 for i in range(n):
                     while True:
                         name=input(f"Enter name {i+1}: ")
-                        if name.isalpha():
+                        if name.isalpha() and len(name)>=2:
                                 names.append(name)
                                 break
                         else:
-                                print("INVALID NAME !, Use only letters")  
+                                print("INVALID NAME !, Use atleast 2 letters")  
             seats-=n
             print("Collected names  ",names)     
             print("Total seats booked: ",n)
