@@ -1,5 +1,6 @@
 
 print("Welcome to Train Ticket Booking System")
+total_booked=0
 total=60
 seats=total
 while True:
@@ -33,6 +34,7 @@ while True:
                     while True:
                         name=input(f"Enter name {i+1}: ")
                         if name.isalpha() and len(name)>=2:
+                                name=name.capitalize()
                                 names.append(name)
                                 break
                         else:
@@ -42,6 +44,8 @@ while True:
             print("Total seats booked: ",n)
             print("Ticket booked successfully!")
             print("Remaining seats:", seats) 
+            total_booked+=n
+            print("Total number of seats booked so far: ",total_booked)
             print("----------------------")
         else:
             print("Invalid train number")
